@@ -6,21 +6,18 @@ import numpy as np
 import pandas as pd
 
 from sqlalchemy import create_engine
-import nltk
-nltk.download(['punkt', 'wordnet'])
+
 from nltk.tokenize import word_tokenize
+from nltk.stem import WordNetLemmatizer
 
 from sklearn.multioutput import MultiOutputClassifier
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.model_selection import train_test_split
-
-import re
-from nltk.stem import WordNetLemmatizer
 from sklearn.feature_extraction.text import CountVectorizer, TfidfTransformer
-from sklearn.grid_search import GridSearchCV
+from sklearn.model_selection import GridSearchCV
 from sklearn.pipeline import Pipeline
 from sklearn.metrics import classification_report
-from sklearn.neighbors import KNeighborsClassifier
+from sklearn.neighbors import KNeighborsClassifierimport pickle
 
 import pickle
 
