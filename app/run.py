@@ -74,8 +74,8 @@ def index():
         {
             'data': [
                 Bar(
-                    x=category_names,
-                    y=category_boolean
+                    x=label_cats,
+                    y=label_counts
                 )
             ],
 
