@@ -17,7 +17,6 @@ from sklearn.feature_extraction.text import CountVectorizer, TfidfTransformer
 from sklearn.model_selection import GridSearchCV
 from sklearn.pipeline import Pipeline
 from sklearn.metrics import classification_report
-from sklearn.neighbors import KNeighborsClassifierimport 
 
 import pickle
 
