@@ -75,7 +75,7 @@ def build_model(X_train,y_train):
         'clf__estimator__min_samples_split': [2, 4],
     }
     cv = GridSearchCV(estimator=pipeline, param_grid=parameters)
-    cv.fit(X_train,y_train)
+    #cv.fit(X_train,y_train)
     return cv
 
 def evaluate_model(pipeline, X_test, Y_test, category_names):
