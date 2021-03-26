@@ -34,6 +34,9 @@ def load_data(database_filepath):
     engine = create_engine('sqlite:///data/DisasterResponse.db')
     table_name = (database_filepath).replace(".db","") + "_table"
     df =  pd.read_sql_table(table_name, engine)
+    
+    df['related']=df['related'].map(lambda x: 1 if x == 2 else x)
+    
     X = df.message.values
     y = df.iloc[:,5:]
     return X, y, y.keys()
